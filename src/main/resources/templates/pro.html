@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poject</title>
+</head>
+<body>
+<h1>
+    Project
+</h1>
+<h3 th:text="'name = ' + ${pro.getName()}"></h3>
+<br><br>
+<h3 th:text="'company = ' + ${pro.getCompany()}"></h3>
+<br><br>
+<h3 th:text="'desc = ' + ${pro.getDescription()}"></h3>
+<br><br>
+<img th:src="@{'/img/'+${pro.getImage()}}" alt="Image">
+<h3>
+    Update
+</h3>
+<a th:href="@{/project/update/{id}(id=${pro.getId()})}">
+    Update
+</a>
+<hr>
+<h3>
+    Delete
+</h3>
+<a th:href="@{/project/delete/{id}(id=${pro.getId()})}">
+    Delete
+</a>
+<br>
+<br>
+<hr>
+<h2>
+    Obtain the project
+</h2>
+<a th:href="@{/project/buy/{id}(id=${pro.getId()})}">
+    Obtain
+</a>
+</body>
+</html>

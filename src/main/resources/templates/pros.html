@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All</title>
+</head>
+<body>
+<h1>
+    All projects
+</h1>
+<hr>
+<div th:each="t : ${pro}">
+    <h3 th:text="'name = ' + ${t.getName()}"></h3>
+    <h3 th:text="'company = ' + ${t.getCompany()}"></h3>
+    <h3 th:text="'desc = ' + ${t.getDescription()}"></h3>
+    <h3 th:text="'creator = ' + ${t.getCreator()}"></h3>
+    <a th:href="@{/project/{id}(id=${t.getId()})}" th:text="'Entry by id = ' + ${t.getId()}">
+
+    </a>
+</div>
+<hr>
+<br>
+<h2>
+    Add project
+</h2>
+<form method="get" action="/project/add">
+    <button type="submit">
+        Add project
+    </button>
+</form>
+<br><br>
+<hr>
+<h2>
+    Only an Admin
+</h2>
+<a href="/user/admin">
+    Admin
+</a>
+</body>
+</html>

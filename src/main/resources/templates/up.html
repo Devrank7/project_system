@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<h1>
+    Update project
+</h1>
+<form method="post" enctype="multipart/form-data" th:object="${pro}">
+    <input type="text" placeholder="name" name="name" th:value="*{getName()}">
+    <br><br>
+    <input type="text" placeholder="description" name="description" th:value="*{getDescription()}">
+    <br><br>
+    <input type="text" placeholder="company" name="company" th:value="*{getCompany()}">
+    <br><br>
+    <input type="file" name="file">
+    <br>
+    <button type="submit">
+        Update project
+    </button>
+</form>
+</body>
+</html>

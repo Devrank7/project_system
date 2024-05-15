@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add project</title>
+</head>
+<body>
+<h1>
+    Add project
+</h1>
+<form method="post" enctype="multipart/form-data" th:object="${pro}">
+    <input type="text" placeholder="name" name="name">
+    <br><br>
+    <input type="text" placeholder="description" name="description">
+    <br><br>
+    <input type="text" placeholder="company" name="company">
+    <br><br>
+    <input type="file" name="file">
+    <br>
+    <button type="submit">
+        Add project
+    </button>
+</form>
+</body>
+</html>

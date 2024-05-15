@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authetification</title>
+</head>
+<body>
+<h1>
+    You need to auth in our web-app
+</h1>
+<form method="post" th:object="${usr}">
+    <input type="text" placeholder="name" name="name">
+    <br><br>
+    <input type="text" placeholder="email" name="email">
+    <br><br>
+    <input type="text" placeholder="age" name="age">
+    <br><br>
+    <input type="password" placeholder="password" name="password">
+    <br><br>
+    <button type="submit">
+        Auth
+    </button>
+</form>
+</body>
+</html>

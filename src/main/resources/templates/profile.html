@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<h1>
+    Your profile
+</h1>
+<h3 th:text="'name = ' + ${usr.getName()}"></h3>
+<h3 th:text="'email = ' + ${usr.getEmail()}"></h3>
+<h3 th:text="'age = ' + ${usr.getAge()}"></h3>
+<hr>
+<h3 th:text="'Role = ' + ${usr.getRole()}"></h3>
+<hr>
+<h3 th:text="'my project'">
+
+</h3>
+<br><br>
+<div th:each="j : ${usr.getProjects()}">
+    <h4 th:text="'name = ' + ${j.getName()}"></h4>
+    <h4 th:text="'company = ' + ${j.getCompany()}"></h4>
+    <h4 th:text="'description = ' + ${j.getDescription()}"></h4>
+    <h4 th:text="'creator = ' + ${j.getCreator()}"></h4>
+    <img th:src="@{'/img/'+${j.getImage()}}" alt="Image">
+    <br><br>
+    <h5>
+        The project detach off your account
+    </h5>
+    <a th:href="@{/project/detach/{id}(id=${j.getId()})}">
+        Detach
+    </a>
+</div>
+<h3>
+    Update data
+</h3>
+<form method="get" action="/user/profile/update">
+    <button type="submit" >
+        Update
+    </button>
+</form>
+<br>
+<br>
+<hr>
+<h3>
+    Delete data
+</h3>
+<form method="post" action="/user/profile/delete">
+    <button type="submit" >
+        Delete
+    </button>
+</form>
+
+<br><br>
+<hr>
+<h2>
+    Get Admin
+</h2>
+<form method="get" action="/user/get/admin">
+    <button type="submit">
+        Get an Admin
+    </button>
+</form>
+</body>
+</html>

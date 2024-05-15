@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All</title>
+</head>
+<body>
+<h1>
+    Everybody users
+</h1>
+<div th:each="t : ${all}">
+    <p th:text="'name = ' + ${t.getName()}"></p>
+    <p th:text="'email = ' + ${t.getEmail()}"></p>
+    <p th:text="'age = ' + ${t.getAge()}"></p>
+    <p th:text="'role = ' + ${t.getRole()}"></p>
+    <br><br>
+    <hr>
+</div>
+</body>
+</html>
